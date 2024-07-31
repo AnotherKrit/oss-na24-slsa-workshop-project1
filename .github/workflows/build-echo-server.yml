@@ -53,6 +53,7 @@ jobs:
         id: build
         with:
           push: true
+          platforms: linux/amd64,linux/arm64
           context: "{{defaultContext}}:images/echo-server"
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
